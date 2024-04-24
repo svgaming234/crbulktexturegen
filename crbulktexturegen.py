@@ -15,7 +15,7 @@ if len(sys.argv) < 2:
     if os.name == "nt":
         moddir = "C:/Users/" + username + "/AppData/Local/cosmic-reach/mods/assets/"
     else:
-        moddir = "/home/" + username + "/.local/share/cosmic-reach"
+        moddir = "/home/" + username + "/.local/share/cosmic-reach/"
 else:
     print("Custom argument detected. Setting custom CR mod directory based on it...")
     moddir = sys.argv[1]
