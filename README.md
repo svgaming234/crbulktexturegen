@@ -8,4 +8,5 @@ Add the textures you want to add into the game into the "textures" folder in the
 
 ## OS compatibilty
 
-MacOS may have issues running this program as it is untested on MacOS.
+The program has been tested on Windows (7 and up tested but older versions may work) and Linux (tested Debian but should work on any distro). Tested on Python 3.8 and up however older versions may work.
+MacOS and other OS-es may have issues running this program as they are untested.
