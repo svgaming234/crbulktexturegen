@@ -4,9 +4,20 @@ import os
 import shutil
 
 if len(sys.argv) < 2:
+    if len(sys.argv) < 3:
+        basetexturedir = "textures/"
+    else:
+        print("Custom argument for base temporary textures folder detected. Setting custom CR mod directory based on it...")
+        basetexturedir = sys.argv[2]
+    
     username = getpass.getuser()
-    moddir = "C:/Users/" + username + "/AppData/Local/cosmic-reach/mods/assets/"
+
+    if os.name == "nt":
+        moddir = "C:/Users/" + username + "/AppData/Local/cosmic-reach/mods/assets/"
+    else:
+        moddir = "/home/" + username + "/.local/share/cosmic-reach"
 else:
+    print("Custom argument detected. Setting custom CR mod directory based on it...")
     moddir = sys.argv[1]
 
 blockdir = moddir + "blocks/"
